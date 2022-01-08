@@ -19,7 +19,7 @@
         {
             get
             {
-                return price;
+                return this.price;
             }
 
             set

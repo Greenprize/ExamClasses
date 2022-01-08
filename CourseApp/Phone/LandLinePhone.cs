@@ -6,20 +6,26 @@
     {
         private double price;
 
+        public LandLinePhone(string name, float diagonal, double price)
+        {
+            Name = name;
+            Price = price;
+        }
+
         public string Name { get; set; }
 
         public double Price
         {
             get
             {
-                return price;
+                return this.price;
             }
 
             set
             {
                 if (value > 0)
                 {
-                    price = value;
+                    this.price = value;
                 }
             }
         }

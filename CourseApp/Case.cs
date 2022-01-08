@@ -2,15 +2,15 @@
 {
     using System;
 
-    public class IOSPhone : SmartPhone, IProduct
+    public class Case : IProduct
     {
         private double price;
 
-        public IOSPhone(string name, float diagonal, double price)
+        public Case(string name, double price, string material)
         {
             Name = name;
             Price = price;
-            Diagonal = diagonal;
+            Material = material;
         }
 
         public string Name { get; set; }
@@ -31,9 +31,11 @@
             }
         }
 
+        public string Material { get; set; }
+
         public void Present()
         {
-            Console.WriteLine($@"Name: {(string.IsNullOrEmpty(Name) ? "none" : Name)} Diagonal: {Diagonal} Price: {Price}$");
+            Console.WriteLine($@"Name: {(string.IsNullOrEmpty(Name) ? "none" : Name)} Material: {(string.IsNullOrEmpty(Material) ? "none" : Material)} Price: {Price}$");
         }
     }
 }
