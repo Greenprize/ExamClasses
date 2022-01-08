@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class IOSPhone : SmartPhone, IProduct
+    public class IOSPhone : SmartPhone, IProduct, IApp
     {
         private double price;
 
@@ -34,6 +34,21 @@
         public void Present()
         {
             Console.WriteLine($@"Name: {(string.IsNullOrEmpty(Name) ? "none" : Name)} Diagonal: {Diagonal} Price: {Price}$");
+        }
+
+        public string InstallApp()
+        {
+            return "App installed";
+        }
+
+        public string DeleteApp()
+        {
+            return "App deleted";
+        }
+
+        public string RunApp()
+        {
+            return "App running";
         }
     }
 }
