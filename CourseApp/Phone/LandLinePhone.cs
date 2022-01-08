@@ -6,7 +6,7 @@
     {
         private double price;
 
-        public LandLinePhone(string name, float diagonal, double price)
+        public LandLinePhone(string name, double price)
         {
             Name = name;
             Price = price;
