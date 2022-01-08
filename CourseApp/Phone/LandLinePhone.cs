@@ -6,6 +6,12 @@
     {
         private double price;
 
+        public LandLinePhone(string name, float diagonal, double price)
+        {
+            Name = name;
+            Price = price;
+        }
+
         public string Name { get; set; }
 
         public double Price
