@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class AndroidPhone : SmartPhone, IProduct
+    public class AndroidPhone : SmartPhone, IProduct, ICamera
     {
         private double price;
 
@@ -29,6 +29,11 @@
                     price = value;
                 }
             }
+        }
+
+        public void MakePhoto()
+        {
+            Console.WriteLine("I'm taking a photo, please smile!");
         }
 
         public void Present()
