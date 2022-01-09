@@ -26,6 +26,8 @@
         {
             goods.Add(new AndroidPhone("GooglePixel", 10, 100));
             goods.Add(new IOSPhone("IPhone 13", 100, 1000));
+            AddPhone("IPhone 13", 10, 100);
+            AddPhone("Babushka 94", 100);
         }
 
         public void AddPhone(string name, double price)
@@ -61,8 +63,6 @@
         public void Present()
         {
             Goods();
-            AddPhone("IPhone 13", 10, 100);
-            AddPhone("Babushka 94", 100);
             foreach (IProduct item in goods)
             {
                 item.Present();
