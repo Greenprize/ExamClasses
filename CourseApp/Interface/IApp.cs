@@ -1,7 +1,9 @@
 ﻿namespace CourseApp
 {
-    public interface IApp
+    public interface IApp : IProduct
     {
+        string OS { get; set; }
+
         string InstallApp();
 
         string DeleteApp();

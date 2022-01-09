@@ -2,8 +2,10 @@
 {
     using System;
 
-    public class AndroidPhone : SmartPhone, IProduct, IApp
+    public class AndroidPhone : SmartPhone, IProduct
     {
+        private AppStore appSt = new AppStore("AppStore");
+
         private double price;
 
         public AndroidPhone(string name, float diagonal, double price)
@@ -34,21 +36,8 @@
         public void Present()
         {
             Console.WriteLine($@"Name: {(string.IsNullOrEmpty(Name) ? "none" : Name)} Diagonal: {Diagonal} Price: {Price}$");
-        }
-
-        public string InstallApp()
-        {
-            return "App installed";
-        }
-
-        public string DeleteApp()
-        {
-            return "App deleted";
-        }
-
-        public string RunApp()
-        {
-            return "App running";
+            appSt.Apps("Subway", 0, "Android");
+            appSt.Present();
         }
     }
 }
