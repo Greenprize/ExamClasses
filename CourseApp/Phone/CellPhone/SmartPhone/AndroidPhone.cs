@@ -4,18 +4,20 @@
 
     public class AndroidPhone : SmartPhone, IProduct
     {
-        private AppStore appSt = new AppStore("AppStore");
-
         private double price;
 
-        public AndroidPhone(string name, float diagonal, double price)
+        public AndroidPhone(string name, float diagonal, double price, string typeOfScreen)
         {
             Name = name;
             Price = price;
             Diagonal = diagonal;
+            Matrix matrix = new Matrix(typeOfScreen);
+            Matriks = matrix.InstallMatrix(diagonal);
         }
 
         public string Name { get; set; }
+
+        public string Matriks { get; }
 
         public double Price
         {
@@ -35,9 +37,7 @@
 
         public void Present()
         {
-            Console.WriteLine($@"Name: {(string.IsNullOrEmpty(Name) ? "none" : Name)} Diagonal: {Diagonal} Price: {Price}$");
-            appSt.Apps("Subway", 0, "Android");
-            appSt.Present();
+            Console.WriteLine($@"Name: {(string.IsNullOrEmpty(Name) ? "none" : Name)} Diagonal: {Diagonal} Matrix: {(string.IsNullOrEmpty(Matriks) ? "none" : Matriks)} Price: {Price}$");
         }
     }
 }
