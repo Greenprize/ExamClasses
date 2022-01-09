@@ -33,7 +33,7 @@
 
         public void Present()
         {
-            Console.WriteLine($@"Name: {(string.IsNullOrEmpty(Name) ? "none" : Name)} Diagonal: {Diagonal} Price: {Price}$");
+            Console.WriteLine($@"Name: {(string.IsNullOrEmpty(Name) ? "none" : Name)} Diagonal: {Diagonal} Type of GeoCordinator: {GPS} Price: {Price}$");
         }
     }
 }
