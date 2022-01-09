@@ -33,7 +33,7 @@
 
         public void Present()
         {
-            Console.WriteLine($@"Name: {(string.IsNullOrEmpty(Name) ? "none" : Name)} Diagonal: {Diagonal} Price: {Price}$");
+            Console.WriteLine($@"IOSPhone:   Name: {(string.IsNullOrEmpty(Name) ? "none" : Name)} Diagonal: {Diagonal} Price: {Price}$");
         }
     }
 }

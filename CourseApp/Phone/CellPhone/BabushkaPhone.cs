@@ -32,7 +32,7 @@
 
         public void Present()
         {
-            Console.WriteLine($@"Name: {(string.IsNullOrEmpty(Name) ? "none" : Name)} Price: {Price}$");
+            Console.WriteLine($@"BabushkaPhone:    Name: {(string.IsNullOrEmpty(Name) ? "none" : Name)} Price: {Price}$");
         }
     }
 }
